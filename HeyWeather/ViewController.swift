@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, NSURLConnectionDelegate {
-                            
+
+    // 使用 NSMutableData 儲存下載資料
+    var data: NSMutableData = NSMutableData()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,11 +47,28 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     // 下載中
     func connection(connection: NSURLConnection!, didReceiveData dataReceived: NSData!) {
         println("downloading")
+
+        self.data.appendData(dataReceived)
     }
     
     // 下載完成
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         println("finished")
+
+        // 解析 JSON
+        // 使用 NSDictionary: NSDictionary 是一種 Associative Array 的資料結構
+        var error: NSError?
+        let jsonDictionary = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+
+        // 讀取各項天氣資訊
+        let temp: AnyObject? = jsonDictionary["main"]?["temp"]
+        
+        // 資料處理
+        let weatherTemp = Int(round((temp!.floatValue - 273.15)))
+
+
+        // 輸出
+        println("temp: \(weatherTemp)℃")
     }
 }
 
