@@ -18,6 +18,9 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         // Do any additional setup after loading the view, typically from a nib.
 
         startConnection()
+        
+        let background = UIImage(named: "background_sunday.png")
+        self.view.backgroundColor = UIColor(patternImage: background)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,7 @@
 		18BE88B7199DFBC400D740B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE88B5199DFBC400D740B8 /* Main.storyboard */; };
 		18BE88B9199DFBC400D740B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE88B8199DFBC400D740B8 /* Images.xcassets */; };
 		18BE88C5199DFBC400D740B8 /* HeyWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE88C4199DFBC400D740B8 /* HeyWeatherTests.swift */; };
+		18BE88D5199E191400D740B8 /* background_sunday.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BE88D4199E191400D740B8 /* background_sunday.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		18BE88BE199DFBC400D740B8 /* HeyWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE88C3199DFBC400D740B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BE88C4199DFBC400D740B8 /* HeyWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWeatherTests.swift; sourceTree = "<group>"; };
+		18BE88D4199E191400D740B8 /* background_sunday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_sunday.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		18BE88AE199DFBC400D740B8 /* HeyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				18BE88D4199E191400D740B8 /* background_sunday.png */,
 				18BE88B1199DFBC400D740B8 /* AppDelegate.swift */,
 				18BE88B3199DFBC400D740B8 /* ViewController.swift */,
 				18BE88B5199DFBC400D740B8 /* Main.storyboard */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BE88D5199E191400D740B8 /* background_sunday.png in Resources */,
 				18BE88B7199DFBC400D740B8 /* Main.storyboard in Resources */,
 				18BE88B9199DFBC400D740B8 /* Images.xcassets in Resources */,
 			);
@@ -397,6 +401,7 @@
 				18BE88CA199DFBC400D740B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BE88CB199DFBC400D740B8 /* Build configuration list for PBXNativeTarget "HeyWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +410,7 @@
 				18BE88CD199DFBC400D740B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
