@@ -74,6 +74,10 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
 
         // 輸出
         println("temp: \(weatherTemp)℃")
+        
+        // 輸出到 UI
+        self.temperature.font = UIFont.boldSystemFontOfSize(48)
+        self.temperature.text = "\(weatherTemp)℃"
     }
 }
 
