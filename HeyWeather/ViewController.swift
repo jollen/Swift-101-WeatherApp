@@ -69,15 +69,16 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         let temp: AnyObject? = jsonDictionary["main"]?["temp"]
         
         // 資料處理
-        let weatherTemp = Int(round((temp!.floatValue - 273.15)))
+        let weatherTempCelsius = Int(round((temp!.floatValue - 273.15)))
+        let weatherTempFahrenheit = Int(round(((temp!.floatValue - 273.15) * 1.8) + 32))
 
 
         // 輸出
-        println("temp: \(weatherTemp)℃")
+        println("temp: \(weatherTempCelsius)℃")
         
         // 輸出到 UI
         self.temperature.font = UIFont.boldSystemFontOfSize(48)
-        self.temperature.text = "\(weatherTemp)℃"
+        self.temperature.text = "\(weatherTempCelsius)℃"
     }
 }
 
