@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet var temperature: UILabel!
+    @IBOutlet var icon: UIImageView!
 
     // 使用 NSMutableData 儲存下載資料
     var data: NSMutableData = NSMutableData()
@@ -68,17 +69,38 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         // 讀取各項天氣資訊
         let temp: AnyObject? = jsonDictionary["main"]?["temp"]
         
+        // use '?' to downcast to NSArray
+        if let weather = jsonDictionary["weather"]? as? NSArray {
+            // Safe code 寫作觀念:
+            // 使用 as? 轉型時，要把以下這行放進 if statement 裡處理
+            let weatherDictionary = (weather[0] as NSDictionary)
+            // 天氣狀態 (多雲、晴朗等等)
+            updateWeatherConditionIcon(weatherDictionary["id"] as Int)
+        }
+        
         // 資料處理
         let weatherTempCelsius = Int(round((temp!.floatValue - 273.15)))
         let weatherTempFahrenheit = Int(round(((temp!.floatValue - 273.15) * 1.8) + 32))
 
-
-        // 輸出
+        // 測試輸出
         println("temp: \(weatherTempCelsius)℃")
         
         // 輸出到 UI
         self.temperature.font = UIFont.boldSystemFontOfSize(48)
         self.temperature.text = "\(weatherTempCelsius)℃"
+    }
+    
+    // 解讀 Weather Condition Code
+    // See: http://bugs.openweathermap.org/projects/api/wiki/Weather_Condition_Codes
+    func updateWeatherConditionIcon(weatherId: Int) {
+        println("weather ID: \(weatherId)")
+        
+        switch weatherId {
+        case 801, 802, 803, 804:
+            self.icon.image = UIImage(named: "cloudy")
+        default:
+            println("no weather icon")
+        }
     }
 }
 

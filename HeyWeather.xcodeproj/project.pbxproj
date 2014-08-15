@@ -13,6 +13,7 @@
 		18BE88B9199DFBC400D740B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE88B8199DFBC400D740B8 /* Images.xcassets */; };
 		18BE88C5199DFBC400D740B8 /* HeyWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE88C4199DFBC400D740B8 /* HeyWeatherTests.swift */; };
 		18BE88D5199E191400D740B8 /* background_sunday.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BE88D4199E191400D740B8 /* background_sunday.png */; };
+		18CF65AF199E6B8A002E27CA /* cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CF65AE199E6B8A002E27CA /* cloudy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		18BE88C3199DFBC400D740B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BE88C4199DFBC400D740B8 /* HeyWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWeatherTests.swift; sourceTree = "<group>"; };
 		18BE88D4199E191400D740B8 /* background_sunday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_sunday.png; sourceTree = "<group>"; };
+		18CF65AE199E6B8A002E27CA /* cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudy.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		18BE88AE199DFBC400D740B8 /* HeyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				18CF65AE199E6B8A002E27CA /* cloudy.png */,
 				18BE88D4199E191400D740B8 /* background_sunday.png */,
 				18BE88B1199DFBC400D740B8 /* AppDelegate.swift */,
 				18BE88B3199DFBC400D740B8 /* ViewController.swift */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BE88D5199E191400D740B8 /* background_sunday.png in Resources */,
+				18CF65AF199E6B8A002E27CA /* cloudy.png in Resources */,
 				18BE88B7199DFBC400D740B8 /* Main.storyboard in Resources */,
 				18BE88B9199DFBC400D740B8 /* Images.xcassets in Resources */,
 			);
