@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, NSURLConnectionDelegate {
+    
+    @IBOutlet var temperature: UILabel!
 
     // 使用 NSMutableData 儲存下載資料
     var data: NSMutableData = NSMutableData()
