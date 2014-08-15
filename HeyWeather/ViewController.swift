@@ -20,6 +20,24 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-
+    // -- 
+    // -- Section: NSURLConnectionDelegate protocol
+    // --
+    
+    // 開始新的 request
+    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
+        // Recieved a new request, clear out the data object
+        println("new request")
+    }
+    
+    // 下載中
+    func connection(connection: NSURLConnection!, didReceiveData dataReceived: NSData!) {
+        println("downloading")
+    }
+    
+    // 下載完成
+    func connectionDidFinishLoading(connection: NSURLConnection!) {
+        println("finished")
+    }
 }
 
